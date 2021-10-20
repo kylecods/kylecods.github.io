@@ -32,20 +32,20 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#" style="margin: 0; padding: 0;">
-          <img src="images/logo.svg" alt="" width="50" height="30">
+          <img src="images/logo.svg" width="50" height="50">Roto Editor
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown hide">
               <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 File
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#" id="clear-file">Clear</a></li>
-                <li><a class="dropdown-item" href="#" id="save-file">Save Script</a></li>
+                <li><a class="dropdown-item" href="#">Clear</a></li>
+                <li><a class="dropdown-item" href="#" >Save Script</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown hide">
@@ -80,13 +80,29 @@
     </nav>
     <div class="container">
         <div class="row justify-content-end mt-2">
-          <div class="col-auto">
-            <button class="btn btn-sm btn-primary" onclick="alert('COMING SOON')" id="btn-run">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+          <div class="col-auto p-1">
+            <button class="btn btn-sm btn-primary" onclick="alert('COMING SOON')" id="btn-run"  data-bs-toggle="tooltip" data-bs-placement="top" title="Run script">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
                 <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-              </svg>Run
+              </svg>
            </button>
          </div>
+         <div class="col-auto p-1">
+          <button class="btn btn-sm btn-primary" id="save-file"  data-bs-toggle="tooltip" data-bs-placement="top" title="Download script as file">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+            </svg>
+         </button>
+       </div>
+       <div class="col-auto p-1">
+         <button class="btn btn-sm btn-primary" id="clear-file"  data-bs-toggle="tooltip" data-bs-placement="top" title="Clear editor">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+         </button>
+       </div>
         </div>
         <div class="tab-content mt-2" id="myTabContent" style="border: 1px solid lightgray;">
           <div id="home" style="height: 300px; overflow: hidden;"></div>
